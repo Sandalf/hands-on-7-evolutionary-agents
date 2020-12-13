@@ -23,7 +23,7 @@ public class MaxFunctionAgent extends Agent {
         private static final long serialVersionUID = 1L;
 
         public void action() {
-            int populationSize = 10;
+            int populationSize = 30;
             double mutationRate = 0.001;
             double crossoverRate = 0.95;
             int elitismCount = 0;
@@ -31,6 +31,8 @@ public class MaxFunctionAgent extends Agent {
             GeneticAlgorithm ga = new GeneticAlgorithm(populationSize, mutationRate, crossoverRate, elitismCount);
             Population population = ga.initPopulation(chromosomeLength);
             int generation = 1;
+
+            ga.evalPopulation(population);
 
             while (!ga.isTerminationConditionMet(population)) {
                 printGenerationData(generation, population);
