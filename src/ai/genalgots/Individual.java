@@ -20,8 +20,6 @@ public class Individual {
                 this.setGene(i, gene);
             }
         }
-
-        // this.setXValue(xValue);
     }
 
     public int getXValue() {
