@@ -49,7 +49,7 @@ public class MaxFunctionAgent extends Agent {
             printGenerationData(generation, population);
 
             System.out.println("Found solution in " + generation + " generations");
-            System.out.println("Best solution: " + population.getFittest(0).toString());
+            System.out.println("Best solution: " + population.getFittest(0).toString() + " = " + population.getFittest(0).getXValue());
         }
 
         public void printGenerationData(int generation, Population population) {
